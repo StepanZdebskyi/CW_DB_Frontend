@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{195E333D-59FE-432F-B0D1-0838E4408206}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CW_DB_Frontend.UI</RootNamespace>
+    <AssemblyName>CW_DB_Frontend.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=1.1.0.188, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.1.1.0.118\lib\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Base\CommandBase.cs" />
+    <Compile Include="Base\ViewModelBase.cs" />
+    <Compile Include="Commands\AddNewMedRecordCommand.cs" />
+    <Compile Include="Commands\AddNewDoctorCommand.cs" />
+    <Compile Include="Commands\AddNewDoctorsInfoCommand.cs" />
+    <Compile Include="Commands\AddNewDoctorsSheduleCommand.cs" />
+    <Compile Include="Commands\AddNewHospRequestCommand.cs" />
+    <Compile Include="Commands\AddNewPatAttendDocCommand.cs" />
+    <Compile Include="Commands\AddNewPatCaseCommand.cs" />
+    <Compile Include="Commands\AddNewPatCommand.cs" />
+    <Compile Include="Commands\AddNewSpecCommand.cs" />
+    <Compile Include="Commands\AddNewVacSheduleCommand.cs" />
+    <Compile Include="Commands\CompleteAddingDoctor.cs" />
+    <Compile Include="Commands\CompleteAddingDoctorsInfoCommand.cs" />
+    <Compile Include="Commands\CompleteAddingDoctorsSheduleCommand.cs" />
+    <Compile Include="Commands\CompleteAddingHospRequestCommand.cs" />
+    <Compile Include="Commands\CompleteAddingMedRecordCommand.cs" />
+    <Compile Include="Commands\CompleteAddingPatAttendDocCommand.cs" />
+    <Compile Include="Commands\CompleteAddingPatCaseCommand.cs" />
+    <Compile Include="Commands\CompleteAddingPatCommand.cs" />
+    <Compile Include="Commands\CompleteAddingSpecCommand.cs" />
+    <Compile Include="Commands\CompleteAddingVacSheduleCommand.cs" />
+    <Compile Include="Commands\DeleteDoctorCommand.cs" />
+    <Compile Include="Commands\DeleteDoctorCombinedCommand.cs" />
+    <Compile Include="Commands\DeleteDoctorsInfoCommand.cs" />
+    <Compile Include="Commands\DeleteDoctorsSheduleCommand.cs" />
+    <Compile Include="Commands\DeleteHospRequestCombinedCommand.cs" />
+    <Compile Include="Commands\DeleteHospRequestCommand.cs" />
+    <Compile Include="Commands\DeleteMedRecordCommand.cs" />
+    <Compile Include="Commands\DeletePatAttendDocCommand.cs" />
+    <Compile Include="Commands\DeletePatCaseCommand.cs" />
+    <Compile Include="Commands\DeletePatCommand.cs" />
+    <Compile Include="Commands\DeleteSpecCommand.cs" />
+    <Compile Include="Commands\DeleteVacSheduleCommand.cs" />
+    <Compile Include="Commands\EditDoctorCommand.cs" />
+    <Compile Include="Commands\EditDoctorCombinedCommand.cs" />
+    <Compile Include="Commands\EditDoctorsInfoCommand.cs" />
+    <Compile Include="Commands\EditDoctorsSheduleCommand.cs" />
+    <Compile Include="Commands\EditHospRequestCombinedCommand.cs" />
+    <Compile Include="Commands\EditHospRequestCommand.cs" />
+    <Compile Include="Commands\EditMedRecordCommand.cs" />
+    <Compile Include="Commands\EditPatAttendDocCommand.cs" />
+    <Compile Include="Commands\EditPatCaseCommand.cs" />
+    <Compile Include="Commands\EditPatCommand.cs" />
+    <Compile Include="Commands\EditSpecCommand.cs" />
+    <Compile Include="Commands\EditVacSheduleCommand.cs" />
+    <Compile Include="Convertors\UserControlVisibilityConvertor.cs" />
+    <Compile Include="RedirectionCommands\RedirectToDoctorsCombinedCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToDoctorsCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToDoctorsInfoCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToDoctorsSheduleCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToHospRequestsCombinedCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToHospRequestsCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToMedRecordsCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToPatAttendDocCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToPatCasesCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToPatCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToSpecCommand.cs" />
+    <Compile Include="RedirectionCommands\RedirectToVacSheduleCommand.cs" />
+    <Compile Include="ViewModels\AspViewModel.cs" />
+    <Compile Include="ViewModels\DoctorCombinedViewModel.cs" />
+    <Compile Include="ViewModels\DoctorsInfoViewModel.cs" />
+    <Compile Include="ViewModels\DoctorsSheduleViewModel.cs" />
+    <Compile Include="ViewModels\DoctorViewModel.cs" />
+    <Compile Include="ViewModels\HospitalizationRequestCombinedViewModel.cs" />
+    <Compile Include="ViewModels\HospitalizationRequestViewModel.cs" />
+    <Compile Include="ViewModels\MedicalRecordViewModel.cs" />
+    <Compile Include="ViewModels\PatientAttendingDoctorsViewModel.cs" />
+    <Compile Include="ViewModels\PatientCaseViewModel.cs" />
+    <Compile Include="ViewModels\PatientViewModel.cs" />
+    <Compile Include="ViewModels\SpecialityViewModel.cs" />
+    <Compile Include="ViewModels\VacantionSheduleViewModel.cs" />
+    <Compile Include="ViewModels\MyViewModel.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Base\AspMapping.cs" />
+    <Compile Include="Views\AddDoctorsInfoUserControl.xaml.cs">
+      <DependentUpon>AddDoctorsInfoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddDoctorsSheduleUserControl.xaml.cs">
+      <DependentUpon>AddDoctorsSheduleUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddDoctorUserControl.xaml.cs">
+      <DependentUpon>AddDoctorUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddHospRequestUserControl.xaml.cs">
+      <DependentUpon>AddHospRequestUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddMedicalRecordUserControl.xaml.cs">
+      <DependentUpon>AddMedicalRecordUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddPatAttendDocUserControl.xaml.cs">
+      <DependentUpon>AddPatAttendDocUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddPatientCaseUserControl.xaml.cs">
+      <DependentUpon>AddPatientCaseUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddPatientUserControl.xaml.cs">
+      <DependentUpon>AddPatientUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddSpecUserControl.xaml.cs">
+      <DependentUpon>AddSpecUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\AddVacSheduleUserControl.xaml.cs">
+      <DependentUpon>AddVacSheduleUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoctorsCombinedUserControl.xaml.cs">
+      <DependentUpon>DoctorsCombinedUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoctorsInfoUserControl.xaml.cs">
+      <DependentUpon>DoctorsInfoUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoctorsSheduleUserControl.xaml.cs">
+      <DependentUpon>DoctorsSheduleUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DoctorsUserControl.xaml.cs">
+      <DependentUpon>DoctorsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HospRequestsCombinedUserControl.xaml.cs">
+      <DependentUpon>HospRequestsCombinedUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\HospRequestsUserControl.xaml.cs">
+      <DependentUpon>HospRequestsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MedicalRecordsUserControl.xaml.cs">
+      <DependentUpon>MedicalRecordsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatAttendDocUserControl.xaml.cs">
+      <DependentUpon>PatAttendDocUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientCasesUserControl.xaml.cs">
+      <DependentUpon>PatientCasesUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PatientsUserControl.xaml.cs">
+      <DependentUpon>PatientsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SpecsUserControl.xaml.cs">
+      <DependentUpon>SpecsUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\VacSheduleUserControl.xaml.cs">
+      <DependentUpon>VacSheduleUserControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Icons\delete.png" />
+    <Resource Include="Icons\diskette.png" />
+    <Resource Include="Icons\diskette1.png" />
+    <Resource Include="Icons\free-icon-pencil-345548.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CW_DB_Frontend.Model\CW_DB_Frontend.Model.csproj">
+      <Project>{b6eb4254-15a4-407c-b847-3c5b9584876d}</Project>
+      <Name>CW_DB_Frontend.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\AddDoctorsInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddDoctorsSheduleUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddDoctorUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddHospRequestUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddMedicalRecordUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddPatAttendDocUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddPatientCaseUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddPatientUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddSpecUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AddVacSheduleUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoctorsCombinedUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoctorsInfoUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoctorsSheduleUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\DoctorsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HospRequestsCombinedUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\HospRequestsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MedicalRecordsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PatAttendDocUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PatientCasesUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PatientsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SpecsUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\VacSheduleUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

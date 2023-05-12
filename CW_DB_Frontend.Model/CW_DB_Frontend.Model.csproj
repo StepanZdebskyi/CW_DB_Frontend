@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6EB4254-15A4-407C-B847-3C5B9584876D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CW_DB_Frontend.Model</RootNamespace>
+    <AssemblyName>CW_DB_Frontend.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ASP_NET_Connection\DoctorsConnection.cs" />
+    <Compile Include="ASP_NET_Connection\DoctorsInfoConnection.cs" />
+    <Compile Include="ASP_NET_Connection\DoctorsSheduleConnection.cs" />
+    <Compile Include="ASP_NET_Connection\HospitalizationRequestsConnection.cs" />
+    <Compile Include="ASP_NET_Connection\MedicalRecordsConnection.cs" />
+    <Compile Include="ASP_NET_Connection\PatientAttendingDoctorsConnection.cs" />
+    <Compile Include="ASP_NET_Connection\PatientCasesConnection.cs" />
+    <Compile Include="ASP_NET_Connection\PatientsConnection.cs" />
+    <Compile Include="ASP_NET_Connection\SpecialityConnection.cs" />
+    <Compile Include="ASP_NET_Connection\VacantionsSheduleConnection.cs" />
+    <Compile Include="ASP_NET_Model\AspDataModel.cs" />
+    <Compile Include="Models\DoctorCombinedModel.cs" />
+    <Compile Include="Models\DoctorModel.cs" />
+    <Compile Include="Models\DoctorsInfoModel.cs" />
+    <Compile Include="Models\DoctorsSheduleModel.cs" />
+    <Compile Include="Models\HospitalizationRequestCombinedModel.cs" />
+    <Compile Include="Models\HospitalizationRequestModel.cs" />
+    <Compile Include="Models\MedicalRecordModel.cs" />
+    <Compile Include="Models\PatientAttendingDoctorsModel.cs" />
+    <Compile Include="Models\PatientCaseModel.cs" />
+    <Compile Include="Models\PatientModel.cs" />
+    <Compile Include="Models\SpecialityModel.cs" />
+    <Compile Include="Models\VacantionSheduleModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

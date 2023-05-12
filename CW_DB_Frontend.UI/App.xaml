@@ -1,0 +1,8 @@
+﻿<Application x:Class="CW_DB_Frontend.UI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CW_DB_Frontend.UI">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
